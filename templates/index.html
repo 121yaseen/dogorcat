@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>                
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cat or Dog ?</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grayscale.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid bg-info text-white text-center" style="background: #ABC;">
+    <div class="container">
+        <h2 class="display-2">Recognise Cat and Dogs using Convolutional Neural Networks</h2>
+        <br>
+        <img src="{{url_for('static', filename='catordog.jpeg')}}" align="middle" />
+        <br><br>
+        <h2 class="text-white bg-dark">
+    </div>
+</div>
+<div class="container">
+<h3 align="">
+<form class = "fileUpload" action="result" method="POST" enctype="multipart/form-data">
+	<div>
+    <input type="file" class="fileElem" name="pic" accept="image/*">
+  </div>
+    <br>
+    <input type="submit" value="Submit">
+    <br>
+    <br>
+</form>
+</div> 
+
+<style> 
+input[type=submit] {
+  background-color: #AAA;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+div{
+  padding:5px 10px;
+  border:1px solid #000000;
+  position:relative;
+  color:#FFFFFF;
+  border-radius:2px;
+}
+</style>
+</body>
+</html>
