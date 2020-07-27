@@ -26,9 +26,9 @@ def result():
         class_ = str(prediction_classes[0][0])
         breed = str(prediction_classes[0][1:]) #I just know the breed number, don't know the breed name
         if(class_ == '1'):
-          class_ = "Hey, this is a cat"
+          class_ = "Hey, this is a  cat"
         if(class_ == '2'):
-          class_ = "Hey, this is a dog"
+          class_ = "Hey, this is a  dog"
         breed = prediction_classes[0][1:]
 
         return render_template("result.html", prediction=class_, filepath = filepath)
